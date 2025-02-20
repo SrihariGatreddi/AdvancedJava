@@ -10,7 +10,7 @@
 
 //imporatant points to remember about the overriding
 //only inherited methods can be overriden ,in otherwords methods can be overrridden only in the child classes
-//constructors and private methods cant be overriden 
+//constructors and private methods cant be overriden
 //and mrthods which are final can also be not overriden
 //overloading is a compile time binding and a overriding isa runtime binding
 

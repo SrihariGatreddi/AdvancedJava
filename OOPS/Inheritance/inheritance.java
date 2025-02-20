@@ -19,10 +19,14 @@ class emp extends man{
     emp(int age,String name){
         super(age,name);
     }
+    void sayHii(){
+
+    }
 }
 class inheritance{
     public static void main(String[] args) {
-        emp emp1=new emp(24,"Srihari");
+        man emp1=new emp(24,"Srihari");
         System.out.println(emp1.getAge());
+        
     }
 }
