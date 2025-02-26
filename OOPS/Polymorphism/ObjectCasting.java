@@ -1,4 +1,4 @@
-package AdvancedJava.OOPS.Polymorphism1;
+package AdvancedJava.OOPS.Polymorphism;
 // Typecasting is the assessment of the value of one primitive data type to another type. In java, there are two types of casting namely upcasting and downcasting as follows:
 
 // Upcasting is casting a subtype to a super type in an upward direction to the inheritance tree.
@@ -17,9 +17,19 @@ public class ObjectCasting {
     public static void main(String[] args) {
         parent obj1=new child();//its actually 
         obj1.sayNamaste();
-        child obj2=(child)new parent();
+        //obj.sayHello();
+        //obj1 is here of reference type parent and child obj
+
+        child obj2=(child)obj1;
+        //obj1 reference type is downcasted to child reference from parent refernce 
+        //the new obj formed is of refernce type child and obj is also child
+        // it is done to access the child specific methods
         obj2.sayHello();
         obj2.sayNamaste();
+
+
+        //why child parent class refernce obj cant be stored in the child class refernce 
+        
     }
 }
 class parent {

@@ -1,4 +1,4 @@
-package AdvancedJava.OOPS.Polymorphism1;
+package AdvancedJava.OOPS.Polymorphism;
 
 // Source: Main.java
 import java.util.Scanner;
@@ -27,11 +27,14 @@ public class  Polymorphism1{
             //casting with classes and objects 
             // if i try to create instaces as below:
             //Adventure movie=Movie.getMovie(type,tiltle);
-            //it will give error ,because the static method getMovie returns a MOVIE type regerce Object ,but 
-            //the reference type is here of Adventure!!!
+            //it will give error ,static method getMovie returns a parent reference type with child obj,
+            //the parent refernce type should be stored in the parent referce obj;
+            //here in the above example the reference type is of child but return type obj refernces parent
+            //so error occurs !
+        
 
             //to overcome:
-            //casting is done:
+            //casting is done:Down Casting 
             //like casting premitives ,we can cast instances as follows:
             Adventure movie=(Adventure)Movie.getMovie(type,title);//works only if type is ADVENTURE 
             //means the static method grtMovie returns a MOVIE type reference i.e parent type....that is type casted
@@ -59,7 +62,6 @@ public class  Polymorphism1{
     public Movie(String title) {
         this.title = title;
     }
-
     public void watchMovie() {
         String instanceType = this.getClass().getSimpleName();
         System.out.println(title + " is a " + instanceType + " film");
@@ -114,7 +116,7 @@ class ScienceFiction extends Movie {
     }
 
     @Override
-    public void watchMovie() {
+    public void watchMovie(){
         super.watchMovie();
         System.out.printf(".. %s%n".repeat(3),
                 "Bad Aliens do Bad Stuff",
